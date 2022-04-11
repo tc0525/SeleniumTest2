@@ -15,6 +15,7 @@ public class SecondTest {
         System.setProperty("webdriver.chrome.driver", "D:/Automated Testing/chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
+        //
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
