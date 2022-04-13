@@ -15,15 +15,20 @@ public class Frog {
 
 
 
-        if ( a % 2 == 0 )
+        if ( a % 2 == 0 ) {
             System.out.println("'a' even");
+        }
 
-        else
+        else {
             System.out.println("'a' odd");
-        if ( b % 2 == 0 )
+        }
+        
+        if ( b % 2 == 0 ) {
             System.out.println("'b' even");
-        else
+        }
+        else {
             System.out.println("'b' odd");
+        }
 
 
 
