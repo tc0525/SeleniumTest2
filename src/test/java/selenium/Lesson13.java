@@ -1,64 +1,41 @@
 package selenium;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import java.time.Duration;
+import java.util.Scanner;
 
 public class Lesson13 {
+    public static void main(String[] args) {
 
-    @Test
-    public void practiceTest() throws InterruptedException {
-//        СТАНДАРТНАЯ ДЛЯ ВСЕХ ТЕСТОВ ЧАСТЬ
+//Задача 1
 
-        System.setProperty("webdriver.chrome.driver", "D:/Automated Testing/chromedriver.exe");
+        int i;
+        for (i = 0; i < 16; i++) {
+            System.out.println(i);
+        }
 
-        WebDriver driver = new ChromeDriver();
+//Задача 2
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
+        int number = 5;// Возводимое в степень число
+        int result = number;// Результат возведения в степень
+        int power = 1;// Начальный показатель степени
+        do {
+            System.out.println(number + " v stepeni " + power + " = " + result);
+            power++;
+            result = result * number;
+        } while (result < 10000); // условие выхода из цикла
 
+//Задача 3
 
-//НАЧАЛО ТЕСТА
+        int b;
+        for (b = 40; b <= 60; b++)
 
-        driver.get("https://www.saucedemo.com/");
-        Thread.sleep(3000);
+            if (b % 4 == 0) {
 
-        String titleActual = driver.getTitle();
-        String titleExpected = "Swag Labs";
-
-        Assert.assertEquals(titleActual, titleExpected);
-        System.out.println("Заголовок страницы проверен");
-
-        WebElement userName = driver.findElement(By.id("user-name"));
-        userName.sendKeys("test@test.com");
-        Thread.sleep(1000);
-
-        WebElement password = driver.findElement(By.id("password"));
-        password.sendKeys("pass123");
-        Thread.sleep(1000);
-
-        WebElement loginButton = driver.findElement(By.id("login-button"));
-        loginButton.click();
-
-        Thread.sleep(1000);
-
-        WebElement errorMessage = driver.findElement(By.xpath("//h3[@data-test='error']"));
-
-        String actualTextMessage = errorMessage.getText();
-
-        String expectedMessage = "Epic sadface: Username and password do not" +
-                " match any user in this service";
-
-        Assert.assertEquals(actualTextMessage, expectedMessage);
-        System.out.println("Текст сообщения об ошибке проверен");
-
-        driver.quit();
-
+                System.out.println(b);
+            }
     }
 }
+
+
+
+
 
