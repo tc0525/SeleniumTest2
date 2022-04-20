@@ -1,5 +1,6 @@
 package selenium;
 
+import base.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,18 +9,18 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class FirstTest {
+public class FirstTest extends Base {
 
     @Test
     public void firstTest() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "D:/Automated Testing/chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        driver.manage().window().maximize();
+//        System.setProperty("webdriver.chrome.driver", "D:/Automated Testing/chromedriver.exe");
+//
+//        WebDriver driver = new ChromeDriver();
+//
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//
+//        driver.manage().window().maximize();
 
         driver.get("https://www.google.com");
         Thread.sleep( 5000);
