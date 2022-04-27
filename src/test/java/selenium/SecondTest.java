@@ -21,8 +21,6 @@ public class SecondTest extends Base {
 //
 //        driver.manage().window().maximize();
 
-        driver.get("https://selectorshub.com/xpath-practice-page/");
-        Thread.sleep(3000);
 
         String titleActual = driver.getTitle();
         String titleExpected = "XPath & cssSelector Practice Page with all scenarios";
