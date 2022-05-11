@@ -9,13 +9,12 @@ import org.testng.annotations.Test;
 public class SaucedemoDemoPositiveLoginTest extends Base {
 
     @Test
-    public void sauceDemoPositiveLoginTest() throws InterruptedException {
+    public void saucedemoDemoPositiveLoginTest() throws InterruptedException {
 
-        // НАЧАЛО ТЕСТА
         openPage();
 
         login();
 
+
     }
 }
-

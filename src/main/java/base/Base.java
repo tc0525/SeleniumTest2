@@ -28,7 +28,7 @@ public class Base {
 
     @AfterTest
     public void endTest() {
-        driver.quit();
+//        driver.quit();
     }
 
     //ПРОВЕРКА ЧТО ОТКРЫЛАСЬ НУЖНАЯ СТРАНИЦА
@@ -66,4 +66,3 @@ public class Base {
     }
 
 }
-
